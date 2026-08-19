@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}QPairSense | Duplicate Question Detection{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="eyebrow">NLP CLASSIFICATION</div>
+    <h1>Do these questions mean the same thing?</h1>
+    <p>Compare two questions using lexical, token, fuzzy-matching and bag-of-words features.</p>
+</section>
+
+<section class="card">
+    <div class="question-grid">
+        <div>
+            <label for="question1">Question 1</label>
+            <textarea id="question1" maxlength="1000"
+                placeholder="Example: Where is the capital of India?"></textarea>
+            <div class="counter"><span id="count1">0</span>/1000</div>
+        </div>
+
+        <div>
+            <label for="question2">Question 2</label>
+            <textarea id="question2" maxlength="1000"
+                placeholder="Example: Which city serves as India's capital?"></textarea>
+            <div class="counter"><span id="count2">0</span>/1000</div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button id="analyzeBtn">Analyze Questions</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+    </div>
+
+    <div id="errorBox" class="error hidden"></div>
+
+    <div id="result" class="result hidden">
+        <div class="result-badge" id="resultBadge"></div>
+        <h2 id="resultTitle"></h2>
+        <p id="resultMessage"></p>
+
+        <div class="confidence">
+            <div class="confidence-head">
+                <span>Confidence</span>
+                <strong id="confidenceValue">0%</strong>
+            </div>
+            <div class="bar">
+                <div id="confidenceBar"></div>
+            </div>
+        </div>
+
+        <div class="probabilities">
+            <div>
+                <span>Duplicate probability</span>
+                <strong id="duplicateProbability">0%</strong>
+            </div>
+            <div>
+                <span>Non-duplicate probability</span>
+                <strong id="nonDuplicateProbability">0%</strong>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
