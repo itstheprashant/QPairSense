@@ -1,0 +1,82 @@
+{
+  "model_name": "QPairSense Logistic Regression",
+  "model_version": "1.0.0",
+  "trained_at_utc": "2026-08-19T20:36:39.602727+00:00",
+  "algorithm": "LogisticRegression",
+  "dataset": "train.csv",
+  "rows_used": 30000,
+  "positive_rate": 0.3691,
+  "engineered_feature_count": 22,
+  "engineered_features": [
+    "q1_len",
+    "q2_len",
+    "q1_num_words",
+    "q2_num_words",
+    "word_common",
+    "word_total",
+    "word_share",
+    "cwc_min",
+    "cwc_max",
+    "csc_min",
+    "csc_max",
+    "ctc_min",
+    "ctc_max",
+    "last_word_eq",
+    "first_word_eq",
+    "abs_len_diff",
+    "mean_len",
+    "longest_substr_ratio",
+    "fuzz_ratio",
+    "fuzz_partial_ratio",
+    "token_sort_ratio",
+    "token_set_ratio"
+  ],
+  "bow_max_features": 3000,
+  "vocabulary_size": 3000,
+  "test_size": 0.2,
+  "random_state": 42,
+  "metrics": {
+    "accuracy": 0.7766666666666666,
+    "precision": 0.6691148047931967,
+    "recall": 0.781489841986456,
+    "f1": 0.7209496043315285,
+    "roc_auc": 0.8574114882615529,
+    "confusion_matrix": [
+      [
+        2929,
+        856
+      ],
+      [
+        484,
+        1731
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8581892762965133,
+        "recall": 0.7738441215323646,
+        "f1-score": 0.8138371769936094,
+        "support": 3785.0
+      },
+      "1": {
+        "precision": 0.6691148047931967,
+        "recall": 0.781489841986456,
+        "f1-score": 0.7209496043315285,
+        "support": 2215.0
+      },
+      "accuracy": 0.7766666666666666,
+      "macro avg": {
+        "precision": 0.763652040544855,
+        "recall": 0.7776669817594103,
+        "f1-score": 0.767393390662569,
+        "support": 6000.0
+      },
+      "weighted avg": {
+        "precision": 0.7883892838998724,
+        "recall": 0.7766666666666666,
+        "f1-score": 0.7795461814191913,
+        "support": 6000.0
+      }
+    }
+  }
+}
